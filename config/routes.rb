@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  'root' 'home#top'
-  get '/top' => 'home#top'
+  root 'home#top'
   get '/about' => 'home#about'
 
 end
