@@ -3,7 +3,12 @@ class NotesController < ApplicationController
   end
 
   def create
-    @title = params[:title]
-    @content = params[:content]
+    @note = Note.new
+    @note.title = params[:title]
+    @note.content = params[:content]
+    logger.fatal "------------------"
+    logger.debug @note.inspect
+    logger.fatal "------------------"
+    @note.save
   end
 end
