@@ -11,4 +11,8 @@ class NotesController < ApplicationController
     logger.fatal "------------------"
     @note.save
   end
+
+  def index
+    @notes = Note.all
+  end
 end
